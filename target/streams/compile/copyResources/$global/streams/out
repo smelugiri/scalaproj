@@ -1,0 +1,8 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/conf/application.conf,/Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/conf/evolutions,/Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/target/scala-2.11/classes/evolutions)[0m
+[0m[[0mdebug[0m] [0m	(/Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/conf/logback.xml,/Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/conf/messages,/Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/target/scala-2.11/classes/messages)[0m
+[0m[[0mdebug[0m] [0m	(/Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/conf/routes,/Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/conf/evolutions/default,/Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/target/scala-2.11/classes/evolutions/default)[0m
+[0m[[0mdebug[0m] [0m	(/Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/conf/evolutions/default/1.sql,/Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/target/scala-2.11/classes/evolutions/default/1.sql)[0m
