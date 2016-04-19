@@ -17,12 +17,10 @@ import javax.inject._
 import akka.pattern.ask
 import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import scala.concurrent.duration._
-//import akka.cluster.Cluster
-//import akka.cluster.ddata.DistributedData
-//import akka.cluster.ddata.LWWMap
-//import akka.cluster.ddata.LWWMapKey
-//import akka.cluster.ddata.Replicator._
 import akka.routing.RoundRobinPool
+import akka.actor.Status.Success
+import akka.actor.Status.Failure
+import scala.concurrent.Await
   
 
 
@@ -31,7 +29,7 @@ class PersonController @Inject() (system: ActorSystem)(repo: PersonRepository, v
                                  (implicit ec: ExecutionContext) extends Controller with I18nSupport{
 
 
-    implicit val timeout: Timeout = 5.seconds
+    implicit val timeout: Timeout = Timeout(5 seconds)
 
   /**
    * The mapping for the person form.
@@ -51,18 +49,18 @@ class PersonController @Inject() (system: ActorSystem)(repo: PersonRepository, v
     Ok(views.html.index(ticketForm))
   }
   
-//  val findTicketForm: Form[FindTicketForm] = Form {
-//    mapping(
-//      "id" -> nonEmptyText
-//      
-//    )(FindTicketForm.apply)(FindTicketForm.unapply)
-//  }
-//
-//  def find = Action{
-//    Ok(views.html.find(findTicketForm))
-//  }
+  val findTicketForm: Form[FindTicketForm] = Form {
+    mapping(
+      "id" -> nonEmptyText
+      
+    )(FindTicketForm.apply)(FindTicketForm.unapply)
+  }
+
+  def find = Action{
+    Ok(views.html.find(findTicketForm))
+  }
   
-  val person2 = system.actorOf(Person2.props(repo,ec).withRouter(RoundRobinPool(30)), name = "PersonActors")
+  val person2 = system.actorOf(Person2.props(repo,ec).withRouter(RoundRobinPool(10)), name = "PersonActors")
   
   //val isTerm = person2.isTerminated;
   
@@ -73,7 +71,7 @@ class PersonController @Inject() (system: ActorSystem)(repo: PersonRepository, v
 //  val replicator = DistributedData(context.system).replicator
 //  implicit val cluster = Cluster(context.system)
   
-  val ticket2 = system.actorOf(Props[Ticket2].withRouter(RoundRobinPool(30)), name = "TicketActors")
+  //val ticket2 = system.actorOf(Props[Ticket2].withRouter(RoundRobinPool(10)), name = "TicketActors")
 
   
   /**
@@ -93,26 +91,31 @@ class PersonController @Inject() (system: ActorSystem)(repo: PersonRepository, v
       // There were no errors in the from, so create the person.
       ticket => {
           
-          val r = person2 ? Person2.Book(ticket.name, ticket.ticketsCount, ticket.title, ticket2);
-          r.mapTo[String].map {
-            _ => Redirect(routes.PersonController.index)
-            
+          val r = person2 ? Person2.Book(ticket.name, ticket.ticketsCount, ticket.title);
+          play.api.Logger.info(r.value.toString())
           
-          }(ec)
+          r.mapTo[Ticket].map {
 
-         // (person2 ? Person2.Book(ticket.name, ticket.title, ticket.ticketsCount)).mapTo[String].map { message => Ok(message) }
+            case x:Ticket => Ok(views.html.confirm.apply(x)) // keep success page here
+            
+            case _ => Redirect(routes.PersonController.index()) // Keep a failure page here
+             
+          }(ec)
           
-       
       }
     )
   }
+  
+  
 
   /**
    * A REST endpoint that gets all the people as JSON.
    */
   def getTickets = Action.async { implicit request =>
-  	repo.listTickets().map { tickets =>
-      Ok(Json.toJson(tickets))
+  	repo.listTickets().map { 
+  	  case tickets: Seq[Ticket] => Ok(views.html.display.apply(tickets.toList))
+  	   
+  	  case _  => Redirect(routes.PersonController.index())
     }(ec)
   }
 
@@ -123,31 +126,55 @@ class PersonController @Inject() (system: ActorSystem)(repo: PersonRepository, v
    *
    * This is asynchronous, since we're invoking the asynchronous methods on PersonRepository.
    */
-//  def findTicket = Action.async { implicit request =>
-//    // Bind the form first, then fold the result, passing a function to handle errors, and a function to handle succes.
-//    ticketForm.bindFromRequest.fold(
-//      // The error function. We return the index page with the error form, which will render the errors.
-//      // We also wrap the result in a successful future, since this action is synchronous, but we're required to return
-//      // a future because the person creation function returns a future.
-//      errorForm => {
-//        Future.successful(Ok(views.html.index(errorForm)))
-//      },
-//      // There were no errors in the from, so create the person.
-//      ticket => {
-//          
-//          val r = person2 ? Person2.Book(ticket.name, ticket.ticketsCount, ticket.title, ticket2);
-//          r.mapTo[String].map {
-//            _ => Redirect(routes.PersonController.index)
-//            
-//          
-//          }(ec)
-//
-//         // (person2 ? Person2.Book(ticket.name, ticket.title, ticket.ticketsCount)).mapTo[String].map { message => Ok(message) }
-//          
-//       
-//      }
-//    )
-//  }
+  def findTicket = Action.async { implicit request =>
+    // Bind the form first, then fold the result, passing a function to handle errors, and a function to handle succes.
+    findTicketForm.bindFromRequest.fold(
+      // The error function. We return the index page with the error form, which will render the errors.
+      // We also wrap the result in a successful future, since this action is synchronous, but we're required to return
+      // a future because the person creation function returns a future.
+      errorForm => {
+        Future.successful(Ok(views.html.find(findTicketForm)))
+      },
+      // There were no errors in the from, so create the person.
+      ticket => {
+          
+
+        val r = person2 ? Person2.Find(ticket.id);
+          play.api.Logger.info(r.value.toString())
+          
+          r.mapTo[Seq[Ticket]].map {
+
+            case tickets: Seq[Ticket] => Ok(views.html.display.apply(tickets.toList))
+            
+            case _ => Redirect(routes.PersonController.index()) // Keep a failure page here
+             
+          }(ec)
+
+      }
+    )
+  }
+  
+  
+  
+  def cancelTicket(id:String) = Action.async { implicit request =>
+    
+    val r = person2 ? Person2.Cancel(id);
+          play.api.Logger.info(r.value.toString())
+          
+          r.mapTo[String].map {
+
+            case "Done"=> Ok("Tickets Cancelled")
+            
+            case _ => Redirect(routes.PersonController.index()) // Keep a failure page here
+             
+          }(ec)
+
+    
+   
+    
+    
+  }
+  
   
 }
 /**
@@ -158,4 +185,4 @@ class PersonController @Inject() (system: ActorSystem)(repo: PersonRepository, v
  * that is generated once it's created.
  */
 case class AddTicketForm(name: String, ticketsCount: Int, title: String)
-//case class FindTicketForm(id:String)
+case class FindTicketForm(id:String)

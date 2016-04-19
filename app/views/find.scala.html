@@ -1,16 +1,15 @@
-@(ticket: Form[FindTicket])(implicit messages: Messages)
+@(ticket: Form[FindTicketForm])(implicit messages: Messages)
 
 @import helper._
 
 @main("Ticket Agency") {
 	<script type='text/javascript' src='@routes.Assets.versioned("javascripts/index.js")'></script>
 
-	<ul id="persons"></ul>
+	<ul id="tickets"></ul>
 
-  @form(routes.PersonController.addTicket()) {
-		@inputText(ticket("name"))
-		@inputText(ticket("ticketsCount"))
-		@inputText(ticket("title"))
+  @form(routes.PersonController.findTicket()) {
+		@inputText(ticket("id"))
+		
 
 		<div class="buttons">
 			<input type="submit" value="Select Ticket"/>

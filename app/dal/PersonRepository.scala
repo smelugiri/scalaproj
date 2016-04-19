@@ -3,10 +3,10 @@ package dal
 import javax.inject.{ Inject, Singleton }
 import play.api.db.slick.DatabaseConfigProvider
 import slick.driver.JdbcProfile
-
 import models.Ticket
-
 import scala.concurrent.{ Future, ExecutionContext }
+//import sun.security.krb5.internal.Ticket
+import models.Ticket
 
 /**
  * A repository for people.
@@ -57,6 +57,9 @@ class PersonRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(impl
   //private val people = TableQuery[PeopleTable]
   
   private val tickets = TableQuery[TicketTable]
+  
+ 
+                  
 
   /**
    * Create a person with the given name and age.
@@ -103,4 +106,19 @@ class PersonRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(impl
   def listTickets(): Future[Seq[Ticket]] = db.run {
     tickets.result
   }
+  
+  
+  def findTicket(id: String):Future[Seq[Ticket]] = db.run{
+     val res = tickets.result.map{x => x.filter (_.id.toString() == id)}
+     play.api.Logger.info(res.toString())
+     res
+  }
+  
+  def cancelTicket(id:Long) = db.run{
+    val q = tickets.where { ticket => ticket.id === id}
+      q.delete
+    
+    
+  }
 }
+
