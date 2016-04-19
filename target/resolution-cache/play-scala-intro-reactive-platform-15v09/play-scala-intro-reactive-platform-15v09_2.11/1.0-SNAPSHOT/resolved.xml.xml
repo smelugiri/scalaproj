@@ -4,7 +4,7 @@
 		module="play-scala-intro-reactive-platform-15v09_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20160330202526"
+		publication="20160419163925"
 	>
 		<description>
 		play-scala-intro-reactive-platform-15v09
@@ -45,61 +45,63 @@
 		<dependency org="com.typesafe.play" name="play-slick-evolutions_2.11" rev="1.0.1-bin-rp-15v09p01" conf="compile->default(compile)"/>
 		<dependency org="com.h2database" name="h2" rev="1.4.177" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-actor_2.11" rev="2.3-bin-rp-15v09p01" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-testkit_2.11" rev="2.3-bin-rp-15v09p01" conf="test->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-specs2_2.11" rev="2.4.2-bin-rp-15v09p01" conf="test->default(compile)"/>
-		<override org="com.typesafe.play" module="play-omnidoc_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-java-jdbc_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-datacommons_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.akka" module="akka-slf4j_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
+		<dependency org="com.typesafe.play" name="play-jdbc-evolutions_2.11" rev="2.4.2-bin-rp-15v09p01" conf="compile->default(compile)"/>
 		<override org="com.typesafe.play" module="play-ws_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="org.scala-lang" module="scala-reflect" matcher="exact" rev="2.11.7-bin-rp-15v09p01"/>
-		<override org="org.scala-lang" module="scala-compiler" matcher="exact" rev="2.11.7-bin-rp-15v09p01"/>
-		<override org="com.typesafe.akka" module="akka-camel_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
-		<override org="com.typesafe.akka" module="akka-kernel_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-cache_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-specs2_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="org.scala-lang.modules" module="scala-swing_2.11" matcher="exact" rev="1.0.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-functional_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-test_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.akka" module="akka-actor_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="twirl-compiler_2.11" matcher="exact" rev="1.1.1-bin-rp-15v09p01"/>
-		<override org="com.typesafe.akka" module="akka-osgi_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
-		<override org="org.scala-lang.modules" module="scala-parser-combinators_2.11" matcher="exact" rev="1.0.4-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.slick" module="slick-codegen_2.11" matcher="exact" rev="3.0.1-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-exceptions" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="org.scala-lang" module="scala-library" matcher="exact" rev="2.11.7-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="fork-run-protocol_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.slick" module="slick-extensions_2.11" matcher="exact" rev="3.0.0-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-iteratees_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-jdbc-api_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.slick" module="slick_2.11" matcher="exact" rev="3.0.1-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-slick-evolutions_2.11" matcher="exact" rev="1.0.1-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-java-ws_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-java-jpa_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.slick" module="slick-testkit_2.11" matcher="exact" rev="3.0.1-bin-rp-15v09p01"/>
-		<override org="com.typesafe.akka" module="akka-cluster_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="filters-helpers_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-omnidoc_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
 		<override org="com.typesafe.play" module="twirl-api_2.11" matcher="exact" rev="1.1.1-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-netty-utils" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.akka" module="akka-testkit_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="run-support_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.akka" module="akka-agent_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
-		<override org="com.typesafe.akka" module="akka-multi-node-testkit_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-jdbc_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="org.scala-lang.modules" module="scala-swing_2.11" matcher="exact" rev="1.0.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.slick" module="slick-testkit_2.11" matcher="exact" rev="3.0.1-bin-rp-15v09p01"/>
 		<override org="com.typesafe.play" module="play-jdbc-evolutions_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-json_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-netty-utils" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
 		<override org="com.typesafe.play" module="play-akka-http-server-experimental_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="twirl-parser_2.11" matcher="exact" rev="1.1.1-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-java_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-docs_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-streams-experimental_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="org.scala-lang.modules" module="scala-xml_2.11" matcher="exact" rev="1.0.4-bin-rp-15v09p01"/>
-		<override org="com.typesafe.akka" module="akka-remote_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
+		<override org="com.typesafe.akka" module="akka-kernel_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-jdbc-api_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-test_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
 		<override org="com.typesafe.play" module="play-server_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
 		<override org="com.typesafe.play" module="build-link" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-netty-server_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-soap-client_2.11" matcher="exact" rev="1.0-bin-rp-15v09p01"/>
+		<override org="com.typesafe.akka" module="akka-slf4j_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
+		<override org="com.typesafe.akka" module="akka-testkit_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-iteratees_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
 		<override org="com.typesafe.play" module="play-slick_2.11" matcher="exact" rev="1.0.1-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-jdbc_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-datacommons_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-exceptions" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="org.scala-lang.modules" module="scala-parser-combinators_2.11" matcher="exact" rev="1.0.4-bin-rp-15v09p01"/>
+		<override org="com.typesafe.akka" module="akka-osgi_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
+		<override org="com.typesafe.akka" module="akka-actor_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-netty-server_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.slick" module="slick-codegen_2.11" matcher="exact" rev="3.0.1-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-docs_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-soap-client_2.11" matcher="exact" rev="1.0-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-specs2_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="org.scala-lang.modules" module="scala-xml_2.11" matcher="exact" rev="1.0.4-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-streams-experimental_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="org.scala-lang" module="scala-reflect" matcher="exact" rev="2.11.7-bin-rp-15v09p01"/>
+		<override org="org.scala-lang" module="scala-compiler" matcher="exact" rev="2.11.7-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="run-support_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="twirl-compiler_2.11" matcher="exact" rev="1.1.1-bin-rp-15v09p01"/>
+		<override org="com.typesafe.akka" module="akka-multi-node-testkit_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-json_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-java-ws_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.slick" module="slick_2.11" matcher="exact" rev="3.0.1-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-java-jpa_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-java-jdbc_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.akka" module="akka-remote_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-cache_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-slick-evolutions_2.11" matcher="exact" rev="1.0.1-bin-rp-15v09p01"/>
+		<override org="com.typesafe.akka" module="akka-cluster_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
+		<override org="com.typesafe.akka" module="akka-agent_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
+		<override org="com.typesafe.slick" module="slick-extensions_2.11" matcher="exact" rev="3.0.0-bin-rp-15v09p01"/>
+		<override org="org.scala-lang" module="scala-library" matcher="exact" rev="2.11.7-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-functional_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="play-java_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="twirl-parser_2.11" matcher="exact" rev="1.1.1-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="filters-helpers_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="fork-run-protocol_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
 		<override org="com.typesafe.play" module="fork-run_2.11" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.akka" module="akka-camel_2.11" matcher="exact" rev="2.3-bin-rp-15v09p01"/>
 	</dependencies>
 </ivy-module>

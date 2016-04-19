@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="test"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, fork-run"
-		date="20160330202526"/>
+		date="20160419163925"/>
 	<dependencies>
 		<module organisation="com.h2database" name="h2">
 			<revision name="1.4.177" status="release" pubdate="20140412031049" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.h2database.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="50">
@@ -34,9 +34,10 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-jdbc-evolutions_2.11">
-			<revision name="2.4.2-bin-rp-15v09p01" status="release" pubdate="20150828120246" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="49">
+			<revision name="2.4.2-bin-rp-15v09p01" status="release" pubdate="20150828120246" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="49">
 				<license name="Typesafe Subscription Agreement" url="http://downloads.typesafe.com/website/legal/TypesafeSubscriptionAgreement.pdf"/>
 				<metadata-artifact status="no" details="" size="3246" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/com.typesafe.play/play-jdbc-evolutions_2.11/ivy-2.4.2-bin-rp-15v09p01.xml" searched="false" origin-is-local="false" origin-location="https://repo.typesafe.com/typesafe/for-subscribers-only/AEE4D829FC38A3247F251ED25BA45ADD675D48EB/com/typesafe/play/play-jdbc-evolutions_2.11/2.4.2-bin-rp-15v09p01/play-jdbc-evolutions_2.11-2.4.2-bin-rp-15v09p01.pom"/>
+				<caller organisation="play-scala-intro-reactive-platform-15v09" name="play-scala-intro-reactive-platform-15v09_2.11" conf="test, compile, runtime" rev="2.4.2-bin-rp-15v09p01" rev-constraint-default="2.4.2-bin-rp-15v09p01" rev-constraint-dynamic="2.4.2-bin-rp-15v09p01" callerrev="1.0-SNAPSHOT"/>
 				<caller organisation="com.typesafe.play" name="play-slick-evolutions_2.11" conf="default, compile, runtime, master" rev="2.4.2-bin-rp-15v09p01" rev-constraint-default="2.4.2-bin-rp-15v09p01" rev-constraint-dynamic="2.4.2-bin-rp-15v09p01" callerrev="1.0.1-bin-rp-15v09p01"/>
 				<artifacts>
 					<artifact name="play-jdbc-evolutions_2.11" type="jar" ext="jar" status="no" details="" size="167041" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/com.typesafe.play/play-jdbc-evolutions_2.11/jars/play-jdbc-evolutions_2.11-2.4.2-bin-rp-15v09p01.jar">
@@ -59,7 +60,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-specs2_2.11">
-			<revision name="2.4.2-bin-rp-15v09p01" status="release" pubdate="20150828120537" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="91">
+			<revision name="2.4.2-bin-rp-15v09p01" status="release" pubdate="20150828120537" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="92">
 				<license name="Typesafe Subscription Agreement" url="http://downloads.typesafe.com/website/legal/TypesafeSubscriptionAgreement.pdf"/>
 				<metadata-artifact status="no" details="" size="3209" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/com.typesafe.play/play-specs2_2.11/ivy-2.4.2-bin-rp-15v09p01.xml" searched="false" origin-is-local="false" origin-location="https://repo.typesafe.com/typesafe/for-subscribers-only/AEE4D829FC38A3247F251ED25BA45ADD675D48EB/com/typesafe/play/play-specs2_2.11/2.4.2-bin-rp-15v09p01/play-specs2_2.11-2.4.2-bin-rp-15v09p01.pom"/>
 				<caller organisation="play-scala-intro-reactive-platform-15v09" name="play-scala-intro-reactive-platform-15v09_2.11" conf="test, compile, runtime" rev="2.4.2-bin-rp-15v09p01" rev-constraint-default="2.4.2-bin-rp-15v09p01" rev-constraint-dynamic="2.4.2-bin-rp-15v09p01" callerrev="1.0-SNAPSHOT"/>
@@ -757,12 +758,25 @@
 				</artifacts>
 			</revision>
 		</module>
+		<module organisation="com.typesafe.akka" name="akka-testkit_2.11">
+			<revision name="2.3-bin-rp-15v09p01" status="release" pubdate="20150828120004" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="91">
+				<license name="Typesafe Subscription Agreement" url="http://downloads.typesafe.com/website/legal/TypesafeSubscriptionAgreement.pdf"/>
+				<metadata-artifact status="no" details="" size="2997" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/com.typesafe.akka/akka-testkit_2.11/ivy-2.3-bin-rp-15v09p01.xml" searched="false" origin-is-local="false" origin-location="https://repo.typesafe.com/typesafe/for-subscribers-only/AEE4D829FC38A3247F251ED25BA45ADD675D48EB/com/typesafe/akka/akka-testkit_2.11/2.3-bin-rp-15v09p01/akka-testkit_2.11-2.3-bin-rp-15v09p01.pom"/>
+				<caller organisation="play-scala-intro-reactive-platform-15v09" name="play-scala-intro-reactive-platform-15v09_2.11" conf="test, compile, runtime" rev="2.3-bin-rp-15v09p01" rev-constraint-default="2.3-bin-rp-15v09p01" rev-constraint-dynamic="2.3-bin-rp-15v09p01" callerrev="1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="akka-testkit_2.11" type="jar" ext="jar" status="no" details="" size="254480" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/com.typesafe.akka/akka-testkit_2.11/jars/akka-testkit_2.11-2.3-bin-rp-15v09p01.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/for-subscribers-only/AEE4D829FC38A3247F251ED25BA45ADD675D48EB/com/typesafe/akka/akka-testkit_2.11/2.3-bin-rp-15v09p01/akka-testkit_2.11-2.3-bin-rp-15v09p01.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="com.typesafe.akka" name="akka-actor_2.11">
 			<revision name="2.3-bin-rp-15v09p01" status="release" pubdate="20150828120020" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="30">
 				<license name="Typesafe Subscription Agreement" url="http://downloads.typesafe.com/website/legal/TypesafeSubscriptionAgreement.pdf"/>
 				<metadata-artifact status="no" details="" size="2735" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/ivy-2.3-bin-rp-15v09p01.xml" searched="false" origin-is-local="false" origin-location="https://repo.typesafe.com/typesafe/for-subscribers-only/AEE4D829FC38A3247F251ED25BA45ADD675D48EB/com/typesafe/akka/akka-actor_2.11/2.3-bin-rp-15v09p01/akka-actor_2.11-2.3-bin-rp-15v09p01.pom"/>
 				<caller organisation="com.typesafe.akka" name="akka-slf4j_2.11" conf="compile, runtime" rev="2.3-bin-rp-15v09p01" rev-constraint-default="2.3-bin-rp-15v09p01" rev-constraint-dynamic="2.3-bin-rp-15v09p01" callerrev="2.3-bin-rp-15v09p01"/>
 				<caller organisation="play-scala-intro-reactive-platform-15v09" name="play-scala-intro-reactive-platform-15v09_2.11" conf="test, compile, runtime" rev="2.3-bin-rp-15v09p01" rev-constraint-default="2.3-bin-rp-15v09p01" rev-constraint-dynamic="2.3-bin-rp-15v09p01" callerrev="1.0-SNAPSHOT"/>
+				<caller organisation="com.typesafe.akka" name="akka-testkit_2.11" conf="default, compile, runtime, master" rev="2.3-bin-rp-15v09p01" rev-constraint-default="2.3-bin-rp-15v09p01" rev-constraint-dynamic="2.3-bin-rp-15v09p01" callerrev="2.3-bin-rp-15v09p01"/>
 				<caller organisation="com.typesafe.play" name="play_2.11" conf="compile, runtime" rev="2.3-bin-rp-15v09p01" rev-constraint-default="2.3-bin-rp-15v09p01" rev-constraint-dynamic="2.3-bin-rp-15v09p01" callerrev="2.4.2-bin-rp-15v09p01"/>
 				<artifacts>
 					<artifact name="akka-actor_2.11" type="jar" ext="jar" status="no" details="" size="2820822" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3-bin-rp-15v09p01.jar">
@@ -1150,7 +1164,7 @@
 			</revision>
 		</module>
 		<module organisation="org.specs2" name="specs2-junit_2.11">
-			<revision name="3.6" status="release" pubdate="20151125083246" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://specs2.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="100">
+			<revision name="3.6" status="release" pubdate="20151125083246" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://specs2.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="101">
 				<license name="MIT-style" url="http://www.opensource.org/licenses/mit-license.php"/>
 				<metadata-artifact status="no" details="" size="3147" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/org.specs2/specs2-junit_2.11/ivy-3.6.xml" searched="false" origin-is-local="true" origin-location="/Users/srikanthmelugiri/Downloads/activator-dist-1.3.7/repository/org.specs2/specs2-junit_2.11/3.6/ivys/ivy.xml"/>
 				<caller organisation="com.typesafe.play" name="play-specs2_2.11" conf="default, compile, runtime, master" rev="3.6" rev-constraint-default="3.6" rev-constraint-dynamic="3.6" callerrev="2.4.2-bin-rp-15v09p01"/>
@@ -1162,7 +1176,7 @@
 			</revision>
 		</module>
 		<module organisation="org.specs2" name="specs2-mock_2.11">
-			<revision name="3.6" status="release" pubdate="20151125083248" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://specs2.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="101">
+			<revision name="3.6" status="release" pubdate="20151125083248" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://specs2.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="102">
 				<license name="MIT-style" url="http://www.opensource.org/licenses/mit-license.php"/>
 				<metadata-artifact status="no" details="" size="2932" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/org.specs2/specs2-mock_2.11/ivy-3.6.xml" searched="false" origin-is-local="true" origin-location="/Users/srikanthmelugiri/Downloads/activator-dist-1.3.7/repository/org.specs2/specs2-mock_2.11/3.6/ivys/ivy.xml"/>
 				<caller organisation="com.typesafe.play" name="play-specs2_2.11" conf="default, compile, runtime, master" rev="3.6" rev-constraint-default="3.6" rev-constraint-dynamic="3.6" callerrev="2.4.2-bin-rp-15v09p01"/>
@@ -1174,7 +1188,7 @@
 			</revision>
 		</module>
 		<module organisation="org.specs2" name="specs2-core_2.11">
-			<revision name="3.6" status="release" pubdate="20151125083232" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://specs2.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="92">
+			<revision name="3.6" status="release" pubdate="20151125083232" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://specs2.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="93">
 				<license name="MIT-style" url="http://www.opensource.org/licenses/mit-license.php"/>
 				<metadata-artifact status="no" details="" size="3269" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/org.specs2/specs2-core_2.11/ivy-3.6.xml" searched="false" origin-is-local="true" origin-location="/Users/srikanthmelugiri/Downloads/activator-dist-1.3.7/repository/org.specs2/specs2-core_2.11/3.6/ivys/ivy.xml"/>
 				<caller organisation="org.specs2" name="specs2-mock_2.11" conf="compile, runtime" rev="3.6" rev-constraint-default="3.6" rev-constraint-dynamic="3.6" callerrev="3.6"/>
@@ -1188,7 +1202,7 @@
 			</revision>
 		</module>
 		<module organisation="org.mockito" name="mockito-core">
-			<revision name="1.9.5" status="release" pubdate="20151125082336" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.mockito.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="102">
+			<revision name="1.9.5" status="release" pubdate="20151125082336" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.mockito.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="103">
 				<license name="The MIT License" url="http://code.google.com/p/mockito/wiki/License"/>
 				<metadata-artifact status="no" details="" size="2657" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/org.mockito/mockito-core/ivy-1.9.5.xml" searched="false" origin-is-local="true" origin-location="/Users/srikanthmelugiri/Downloads/activator-dist-1.3.7/repository/org.mockito/mockito-core/1.9.5/ivys/ivy.xml"/>
 				<caller organisation="org.specs2" name="specs2-mock_2.11" conf="compile, runtime" rev="1.9.5" rev-constraint-default="1.9.5" rev-constraint-dynamic="1.9.5" callerrev="3.6"/>
@@ -1200,7 +1214,7 @@
 			</revision>
 		</module>
 		<module organisation="org.objenesis" name="objenesis">
-			<revision name="1.0" status="release" pubdate="20151125082337" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://objenesis.googlecode.com/svn/docs/index.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="103">
+			<revision name="1.0" status="release" pubdate="20151125082337" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://objenesis.googlecode.com/svn/docs/index.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="104">
 				<license name="MIT License" url="http://objenesis.googlecode.com/svn/docs/license.html"/>
 				<metadata-artifact status="no" details="" size="2381" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/org.objenesis/objenesis/ivy-1.0.xml" searched="false" origin-is-local="true" origin-location="/Users/srikanthmelugiri/Downloads/activator-dist-1.3.7/repository/org.objenesis/objenesis/1.0/ivys/ivy.xml"/>
 				<caller organisation="org.mockito" name="mockito-core" conf="compile, runtime" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="1.9.5"/>
@@ -1224,7 +1238,7 @@
 			</revision>
 		</module>
 		<module organisation="org.specs2" name="specs2-matcher_2.11">
-			<revision name="3.6" status="release" pubdate="20151125083233" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://specs2.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="93">
+			<revision name="3.6" status="release" pubdate="20151125083233" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://specs2.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="94">
 				<license name="MIT-style" url="http://www.opensource.org/licenses/mit-license.php"/>
 				<metadata-artifact status="no" details="" size="2659" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/org.specs2/specs2-matcher_2.11/ivy-3.6.xml" searched="false" origin-is-local="true" origin-location="/Users/srikanthmelugiri/Downloads/activator-dist-1.3.7/repository/org.specs2/specs2-matcher_2.11/3.6/ivys/ivy.xml"/>
 				<caller organisation="org.specs2" name="specs2-core_2.11" conf="compile, runtime" rev="3.6" rev-constraint-default="3.6" rev-constraint-dynamic="3.6" callerrev="3.6"/>
@@ -1236,7 +1250,7 @@
 			</revision>
 		</module>
 		<module organisation="org.specs2" name="specs2-common_2.11">
-			<revision name="3.6" status="release" pubdate="20151125083235" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://specs2.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="94">
+			<revision name="3.6" status="release" pubdate="20151125083235" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://specs2.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="95">
 				<license name="MIT-style" url="http://www.opensource.org/licenses/mit-license.php"/>
 				<metadata-artifact status="no" details="" size="3233" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/org.specs2/specs2-common_2.11/ivy-3.6.xml" searched="false" origin-is-local="true" origin-location="/Users/srikanthmelugiri/Downloads/activator-dist-1.3.7/repository/org.specs2/specs2-common_2.11/3.6/ivys/ivy.xml"/>
 				<caller organisation="org.specs2" name="specs2-matcher_2.11" conf="compile, runtime" rev="3.6" rev-constraint-default="3.6" rev-constraint-dynamic="3.6" callerrev="3.6"/>
@@ -1248,7 +1262,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scalaz.stream" name="scalaz-stream_2.11">
-			<revision name="0.7a" status="release" pubdate="20150324100246" resolver="sbt-chain" artresolver="sbt-chain" homepage="" extra-info.apiURL="http://docs.typelevel.org/api/scalaz-stream/stable/0.7a/doc/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="98">
+			<revision name="0.7a" status="release" pubdate="20150324100246" resolver="sbt-chain" artresolver="sbt-chain" homepage="" extra-info.apiURL="http://docs.typelevel.org/api/scalaz-stream/stable/0.7a/doc/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="99">
 				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
 				<metadata-artifact status="no" details="" size="3506" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/org.scalaz.stream/scalaz-stream_2.11/ivy-0.7a.xml" searched="false" origin-is-local="true" origin-location="/Users/srikanthmelugiri/Downloads/activator-dist-1.3.7/repository/org.scalaz.stream/scalaz-stream_2.11/0.7a/ivys/ivy.xml"/>
 				<caller organisation="org.specs2" name="specs2-common_2.11" conf="compile, runtime" rev="0.7a" rev-constraint-default="0.7a" rev-constraint-dynamic="0.7a" callerrev="3.6"/>
@@ -1260,7 +1274,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scodec" name="scodec-bits_2.11">
-			<revision name="1.0.6" status="release" pubdate="20151125083245" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/scodec/scodec-bits" extra-info.apiURL="http://scodec.org/api/scodec-bits/1.0.6/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="99">
+			<revision name="1.0.6" status="release" pubdate="20151125083245" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/scodec/scodec-bits" extra-info.apiURL="http://scodec.org/api/scodec-bits/1.0.6/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="100">
 				<license name="Three-clause BSD-style" url="https://github.com/scodec/scodec-bits/blob/master/LICENSE"/>
 				<metadata-artifact status="no" details="" size="2980" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/org.scodec/scodec-bits_2.11/ivy-1.0.6.xml" searched="false" origin-is-local="true" origin-location="/Users/srikanthmelugiri/Downloads/activator-dist-1.3.7/repository/org.scodec/scodec-bits_2.11/1.0.6/ivys/ivy.xml"/>
 				<caller organisation="org.scalaz.stream" name="scalaz-stream_2.11" conf="compile, runtime" rev="1.0.6" rev-constraint-default="1.0.6" rev-constraint-dynamic="1.0.6" callerrev="0.7a"/>
@@ -1272,7 +1286,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scalaz" name="scalaz-concurrent_2.11">
-			<revision name="7.1.1" status="release" pubdate="20151125083238" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://scalaz.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="96">
+			<revision name="7.1.1" status="release" pubdate="20151125083238" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://scalaz.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="97">
 				<license name="BSD-style" url="http://www.opensource.org/licenses/bsd-license.php"/>
 				<metadata-artifact status="no" details="" size="2819" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/org.scalaz/scalaz-concurrent_2.11/ivy-7.1.1.xml" searched="false" origin-is-local="true" origin-location="/Users/srikanthmelugiri/Downloads/activator-dist-1.3.7/repository/org.scalaz/scalaz-concurrent_2.11/7.1.1/ivys/ivy.xml"/>
 				<caller organisation="org.specs2" name="specs2-common_2.11" conf="compile, runtime" rev="7.1.1" rev-constraint-default="7.1.1" rev-constraint-dynamic="7.1.1" callerrev="3.6"/>
@@ -1291,7 +1305,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scalaz" name="scalaz-effect_2.11">
-			<revision name="7.1.1" status="release" pubdate="20151125083239" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://scalaz.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="97">
+			<revision name="7.1.1" status="release" pubdate="20151125083239" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://scalaz.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="98">
 				<license name="BSD-style" url="http://www.opensource.org/licenses/bsd-license.php"/>
 				<metadata-artifact status="no" details="" size="2660" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/org.scalaz/scalaz-effect_2.11/ivy-7.1.1.xml" searched="false" origin-is-local="true" origin-location="/Users/srikanthmelugiri/Downloads/activator-dist-1.3.7/repository/org.scalaz/scalaz-effect_2.11/7.1.1/ivys/ivy.xml"/>
 				<caller organisation="org.scalaz" name="scalaz-concurrent_2.11" conf="compile, runtime" rev="7.1.1" rev-constraint-default="7.1.1" rev-constraint-dynamic="7.1.1" callerrev="7.1.1"/>
@@ -1303,7 +1317,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scalaz" name="scalaz-core_2.11">
-			<revision name="7.1.1" status="release" pubdate="20151125083236" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://scalaz.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="95">
+			<revision name="7.1.1" status="release" pubdate="20151125083236" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://scalaz.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="96">
 				<license name="BSD-style" url="http://www.opensource.org/licenses/bsd-license.php"/>
 				<metadata-artifact status="no" details="" size="2834" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/org.scalaz/scalaz-core_2.11/ivy-7.1.1.xml" searched="false" origin-is-local="true" origin-location="/Users/srikanthmelugiri/Downloads/activator-dist-1.3.7/repository/org.scalaz/scalaz-core_2.11/7.1.1/ivys/ivy.xml"/>
 				<caller organisation="org.scalaz" name="scalaz-concurrent_2.11" conf="compile, runtime" rev="7.1.1" rev-constraint-default="7.1.1" rev-constraint-dynamic="7.1.1" callerrev="7.1.1"/>
@@ -1426,6 +1440,7 @@
 				<caller organisation="org.scalaz" name="scalaz-effect_2.11" conf="compile, runtime" rev="2.11.7-bin-rp-15v09p01" rev-constraint-default="2.11.7-bin-rp-15v09p01" rev-constraint-dynamic="2.11.5" callerrev="7.1.1"/>
 				<caller organisation="org.scala-lang.modules" name="scala-xml_2.11" conf="compile, runtime" rev="2.11.7-bin-rp-15v09p01" rev-constraint-default="2.11.7-bin-rp-15v09p01" rev-constraint-dynamic="2.11.7-bin-rp-15v09p01" callerrev="1.0.4-bin-rp-15v09p01"/>
 				<caller organisation="com.typesafe.akka" name="akka-actor_2.11" conf="compile, runtime" rev="2.11.7-bin-rp-15v09p01" rev-constraint-default="2.11.7-bin-rp-15v09p01" rev-constraint-dynamic="2.11.7-bin-rp-15v09p01" callerrev="2.3-bin-rp-15v09p01"/>
+				<caller organisation="com.typesafe.akka" name="akka-testkit_2.11" conf="default, compile, runtime, master" rev="2.11.7-bin-rp-15v09p01" rev-constraint-default="2.11.7-bin-rp-15v09p01" rev-constraint-dynamic="2.11.7-bin-rp-15v09p01" callerrev="2.3-bin-rp-15v09p01"/>
 				<caller organisation="org.specs2" name="specs2-junit_2.11" conf="compile, runtime" rev="2.11.7-bin-rp-15v09p01" rev-constraint-default="2.11.7-bin-rp-15v09p01" rev-constraint-dynamic="2.11.6" callerrev="3.6"/>
 				<caller organisation="org.specs2" name="specs2-matcher_2.11" conf="compile, runtime" rev="2.11.7-bin-rp-15v09p01" rev-constraint-default="2.11.7-bin-rp-15v09p01" rev-constraint-dynamic="2.11.6" callerrev="3.6"/>
 				<caller organisation="com.typesafe.play" name="play-datacommons_2.11" conf="compile, runtime" rev="2.11.7-bin-rp-15v09p01" rev-constraint-default="2.11.7-bin-rp-15v09p01" rev-constraint-dynamic="2.11.7-bin-rp-15v09p01" callerrev="2.4.2-bin-rp-15v09p01"/>

@@ -11,8 +11,11 @@ libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-slick-evolutions" % "1.0.0",
   "com.h2database" % "h2" % "1.4.177",
   "com.typesafe.akka" % "akka-actor_2.11" % "2.4.1",
+  "com.typesafe.akka" %% "akka-testkit"  % "2.2-M3"% "test",
   specs2 % Test
 )     
+
+libraryDependencies += evolutions
 
 // Play provides two styles of routers, one expects its actions to be injected, the
 // other, legacy style, accesses its actions statically.

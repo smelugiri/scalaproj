@@ -701,6 +701,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01->org.scala-lang#scala-library;2.11.7-bin-rp-15v09p01 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01->com.typesafe.play#play-jdbc-api_2.11;2.4.2-bin-rp-15v09p01 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01->com.typesafe.play#play-jdbc-api_2.11;2.4.2-bin-rp-15v09p01 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-slick-evolutions_2.11;1.0.1-bin-rp-15v09p01->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-slick-evolutions_2.11;1.0.1-bin-rp-15v09p01->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-slick-evolutions_2.11;1.0.1-bin-rp-15v09p01->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-slick-evolutions_2.11;1.0.1-bin-rp-15v09p01->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-slick-evolutions_2.11;1.0.1-bin-rp-15v09p01->org.scala-lang#scala-library;2.11.7-bin-rp-15v09p01 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-slick-evolutions_2.11;1.0.1-bin-rp-15v09p01->org.scala-lang#scala-library;2.11.7-bin-rp-15v09p01 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-slick-evolutions_2.11;1.0.1-bin-rp-15v09p01->com.typesafe.play#play-slick_2.11;1.0.1-bin-rp-15v09p01 [runtime->runtime(*)][0m
@@ -720,6 +724,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT [compile][0m
@@ -1198,6 +1206,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT [test][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT [runtime][0m
@@ -1677,6 +1689,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.4.2-bin-rp-15v09p01 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-test_2.11;2.4.2-bin-rp-15v09p01 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-test_2.11;2.4.2-bin-rp-15v09p01 {test=[default(compile)]}[0m
@@ -2147,6 +2163,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.11;2.4.2-bin-rp-15v09p01->org.fluentlenium#fluentlenium-core;0.10.3 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.11;2.4.2-bin-rp-15v09p01->org.fluentlenium#fluentlenium-core;0.10.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.4.2-bin-rp-15v09p01 [test->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01 [test->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01 {test=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01[0m
+[0m[[0mdebug[0m] [0m	found com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01 [test->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01 [test->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01->org.scala-lang#scala-library;2.11.7-bin-rp-15v09p01 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01->org.scala-lang#scala-library;2.11.7-bin-rp-15v09p01 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01->org.scala-lang#scala-library;2.11.7-bin-rp-15v09p01 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01->org.scala-lang#scala-library;2.11.7-bin-rp-15v09p01 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01 [test->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-specs2_2.11;2.4.2-bin-rp-15v09p01 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-specs2_2.11;2.4.2-bin-rp-15v09p01 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-specs2_2.11;2.4.2-bin-rp-15v09p01 {test=[default(compile)]}[0m
@@ -3239,6 +3271,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
@@ -3720,6 +3756,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT [test-internal][0m
@@ -4201,6 +4241,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.4.2-bin-rp-15v09p01 [test->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.4.2-bin-rp-15v09p01 [test->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.4.2-bin-rp-15v09p01 [test->compile][0m
@@ -4499,6 +4543,18 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.seleniumhq.selenium#selenium-java;2.44.0->org.webbitserver#webbit;0.4.14 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.seleniumhq.selenium#selenium-java;2.44.0->org.webbitserver#webbit;0.4.14 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.4.2-bin-rp-15v09p01 [test->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01 [test->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01 [test->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01 [test->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01->org.scala-lang#scala-library;2.11.7-bin-rp-15v09p01 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01->org.scala-lang#scala-library;2.11.7-bin-rp-15v09p01 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01->org.scala-lang#scala-library;2.11.7-bin-rp-15v09p01 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01->org.scala-lang#scala-library;2.11.7-bin-rp-15v09p01 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01->com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01 [test->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-specs2_2.11;2.4.2-bin-rp-15v09p01 [test->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-specs2_2.11;2.4.2-bin-rp-15v09p01 [test->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT->com.typesafe.play#play-specs2_2.11;2.4.2-bin-rp-15v09p01 [test->compile][0m
@@ -6346,10 +6402,6 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.11.5 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.11.7-bin-rp-15v09p01 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: com.typesafe.akka#akka-actor_2.11;2.3.8 {compile=[default(compile)]} => dependency: com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: com.typesafe.akka#akka-testkit_2.11;2.3.8 {compile=[default(compile)]} => dependency: com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01 {compile=[default(compile)]}[0m
-[0m[[0minfo[0m] [0mResolving com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01[0m
-[0m[[0mdebug[0m] [0m	found com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbtrc#actor-client-2-11;0.3.1->com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbtrc#actor-client-2-11;0.3.1->com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01->org.scala-lang#scala-library;2.11.7-bin-rp-15v09p01 [compile->master(compile)][0m
@@ -6395,6 +6447,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-slick-evolutions_2.11;1.0.1-bin-rp-15v09p01!play-slick-evolutions_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.h2database#h2;1.4.177!h2.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.11;2.3-bin-rp-15v09p01!akka-actor_2.11.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01!play-jdbc-evolutions_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.commons#commons-lang3;3.4!commons-lang3.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4-bin-rp-15v09p01!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play_2.11;2.4.2-bin-rp-15v09p01!play_2.11.jar[0m
@@ -6439,8 +6492,8 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.zaxxer#HikariCP-java6;2.3.7!HikariCP-java6.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-jdbc-api_2.11;2.4.2-bin-rp-15v09p01!play-jdbc-api_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.reactivestreams#reactive-streams;1.0.0!reactive-streams.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-jdbc-evolutions_2.11;2.4.2-bin-rp-15v09p01!play-jdbc-evolutions_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-test_2.11;2.4.2-bin-rp-15v09p01!play-test_2.11.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01!akka-testkit_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-specs2_2.11;2.4.2-bin-rp-15v09p01!play-specs2_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] junit#junit;4.12!junit.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.novocode#junit-interface;0.11!junit-interface.jar[0m
@@ -6523,8 +6576,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.json4s#json4s-ast_2.11;3.2.10!json4s-ast_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.thoughtworks.paranamer#paranamer;2.6!paranamer.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#control_2.11;0.13.8-M3!control_2.11.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.11;2.3-bin-rp-15v09p01!akka-testkit_2.11.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3761ms :: artifacts dl 83ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2907ms :: artifacts dl 79ms[0m
 [0m[[0mdebug[0m] [0m	report for play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT compile produced in /Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/target/resolution-cache/reports/play-scala-intro-reactive-platform-15v09-play-scala-intro-reactive-platform-15v09_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT runtime produced in /Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/target/resolution-cache/reports/play-scala-intro-reactive-platform-15v09-play-scala-intro-reactive-platform-15v09_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT test produced in /Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/target/resolution-cache/reports/play-scala-intro-reactive-platform-15v09-play-scala-intro-reactive-platform-15v09_2.11-test.xml[0m
@@ -6540,5 +6592,5 @@
 [0m[[0mdebug[0m] [0mcircular dependency found: org.scala-lang#scala-compiler;2.11.7-bin-rp-15v09p01->org.scala-lang.modules#scala-xml_2.11;1.0.4-bin-rp-15v09p01->...[0m
 [0m[[0mdebug[0m] [0m	report for play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT scala-tool produced in /Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/target/resolution-cache/reports/play-scala-intro-reactive-platform-15v09-play-scala-intro-reactive-platform-15v09_2.11-scala-tool.xml[0m
 [0m[[0mdebug[0m] [0m	report for play-scala-intro-reactive-platform-15v09#play-scala-intro-reactive-platform-15v09_2.11;1.0-SNAPSHOT fork-run produced in /Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/target/resolution-cache/reports/play-scala-intro-reactive-platform-15v09-play-scala-intro-reactive-platform-15v09_2.11-fork-run.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (3761ms resolve - 83ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (2907ms resolve - 79ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

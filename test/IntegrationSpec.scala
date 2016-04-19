@@ -18,7 +18,18 @@ class IntegrationSpec extends Specification {
 
       browser.goTo("http://localhost:" + port)
 
-      browser.pageSource must contain("Add Person")
+      browser.pageSource must contain("Name")
     }
   }
+  
+//  "Try" should {
+//
+//    "to check movie name here" in new WithBrowser {
+//
+//      browser.goTo("http://localhost:" + port+"/tickets")
+//
+//      browser.pageSource must contain("Batman")
+//      
+//     }
+//  }
 }

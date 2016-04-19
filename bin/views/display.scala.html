@@ -1,0 +1,31 @@
+@* display2 Template File *@
+@(tickets: List[Ticket])
+
+
+
+<h1>Welcome</h1>
+
+ <table border=1>
+	  <tr>
+	  	<th> Ticket Id</th>
+	  	<th> Movie Name</th>
+	  	<th> Person</th>
+	  	<th> Quantity</th>
+	  	<th> Action </th>
+	  </tr>
+  
+
+@for(ticket <- tickets) {
+  
+ 
+	   <tr>
+	  	<td>@ticket.id</td>
+	  	<td>@ticket.title</td>
+	  	<td>@ticket.name</td>
+	  	<td>@ticket.ticketsCount</td>
+	  	<td><a href="/cancelTicket/@ticket.id"> Cancel ticket(s)</a></td>
+	  </tr>
+  	
+}
+
+  </table>

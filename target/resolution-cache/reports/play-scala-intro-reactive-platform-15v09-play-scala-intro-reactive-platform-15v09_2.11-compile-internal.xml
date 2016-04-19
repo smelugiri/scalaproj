@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, fork-run"
-		date="20160330202526"/>
+		date="20160419163925"/>
 	<dependencies>
 		<module organisation="com.h2database" name="h2">
 			<revision name="1.4.177" status="release" pubdate="20140412031049" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.h2database.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="51">
@@ -34,9 +34,10 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-jdbc-evolutions_2.11">
-			<revision name="2.4.2-bin-rp-15v09p01" status="release" pubdate="20150828120246" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="50">
+			<revision name="2.4.2-bin-rp-15v09p01" status="release" pubdate="20150828120246" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="50">
 				<license name="Typesafe Subscription Agreement" url="http://downloads.typesafe.com/website/legal/TypesafeSubscriptionAgreement.pdf"/>
 				<metadata-artifact status="no" details="" size="3246" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/com.typesafe.play/play-jdbc-evolutions_2.11/ivy-2.4.2-bin-rp-15v09p01.xml" searched="false" origin-is-local="false" origin-location="https://repo.typesafe.com/typesafe/for-subscribers-only/AEE4D829FC38A3247F251ED25BA45ADD675D48EB/com/typesafe/play/play-jdbc-evolutions_2.11/2.4.2-bin-rp-15v09p01/play-jdbc-evolutions_2.11-2.4.2-bin-rp-15v09p01.pom"/>
+				<caller organisation="play-scala-intro-reactive-platform-15v09" name="play-scala-intro-reactive-platform-15v09_2.11" conf="compile-internal, compile, provided, optional" rev="2.4.2-bin-rp-15v09p01" rev-constraint-default="2.4.2-bin-rp-15v09p01" rev-constraint-dynamic="2.4.2-bin-rp-15v09p01" callerrev="1.0-SNAPSHOT"/>
 				<caller organisation="com.typesafe.play" name="play-slick-evolutions_2.11" conf="default, compile, runtime, master" rev="2.4.2-bin-rp-15v09p01" rev-constraint-default="2.4.2-bin-rp-15v09p01" rev-constraint-dynamic="2.4.2-bin-rp-15v09p01" callerrev="1.0.1-bin-rp-15v09p01"/>
 				<artifacts>
 					<artifact name="play-jdbc-evolutions_2.11" type="jar" ext="jar" status="no" details="" size="167041" time="0" location="/Users/srikanthmelugiri/.ivy2/cache/com.typesafe.play/play-jdbc-evolutions_2.11/jars/play-jdbc-evolutions_2.11-2.4.2-bin-rp-15v09p01.jar">

@@ -1,4 +1,2 @@
-[0m[[31merror[0m] [0m/Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/app/actors/Person2.scala:34: wrong number of arguments for pattern actors.Person2.Book(name: String,ticketsCount: Int,title: String,ticket2: akka.actor.ActorRef)[0m
-[0m[[31merror[0m] [0m        case Book(name, ticketsCount, title) => sender ! Ticket2.Book2(ticketsCount) // should send to ticket2 not sender()[0m
-[0m[[31merror[0m] [0m                 ^[0m
-[0m[[31merror[0m] [0mone error found[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m

@@ -21,18 +21,17 @@ import akka.routing.RoundRobinPool
 import akka.actor.Status.Success
 import akka.actor.Status.Failure
 import scala.concurrent.Await
-  
 
 
 @Singleton
-class PersonController @Inject() (system: ActorSystem)(repo: PersonRepository, val messagesApi: MessagesApi)
+case class PersonController @Inject() (system: ActorSystem)(repo: PersonRepository, val messagesApi: MessagesApi)
                                  (implicit ec: ExecutionContext) extends Controller with I18nSupport{
 
 
     implicit val timeout: Timeout = Timeout(5 seconds)
 
   /**
-   * The mapping for the person form.
+   * The mapping for the ticket form.
    */
   val ticketForm: Form[AddTicketForm] = Form {
     mapping(
@@ -40,6 +39,16 @@ class PersonController @Inject() (system: ActorSystem)(repo: PersonRepository, v
       "ticketsCount" -> number.verifying(min(1), max(10)),
       "title" -> nonEmptyText
     )(AddTicketForm.apply)(AddTicketForm.unapply)
+  }
+    
+  /**
+   * The mapping for the ticket form.
+   */
+  val movieForm: Form[AddMovieForm] = Form {
+    mapping(
+      "name" -> nonEmptyText,
+      "totalSeats" -> number.verifying(min(1), max(300))
+    )(AddMovieForm.apply)(AddMovieForm.unapply)
   }
 
   /**
@@ -75,7 +84,7 @@ class PersonController @Inject() (system: ActorSystem)(repo: PersonRepository, v
 
   
   /**
-   * The add person action.
+   * The add ticket action.
    *
    * This is asynchronous, since we're invoking the asynchronous methods on PersonRepository.
    */
@@ -92,7 +101,7 @@ class PersonController @Inject() (system: ActorSystem)(repo: PersonRepository, v
       ticket => {
           
           val r = person2 ? Person2.Book(ticket.name, ticket.ticketsCount, ticket.title);
-          play.api.Logger.info(r.value.toString())
+          play.api.Logger.info("Running")
           
           r.mapTo[Ticket].map {
 
@@ -109,6 +118,35 @@ class PersonController @Inject() (system: ActorSystem)(repo: PersonRepository, v
   
 
   /**
+   * The add movie action.
+   *
+   * This is asynchronous, since we're invoking the asynchronous methods on PersonRepository.
+   */
+  def addMovie = Action.async { implicit request =>
+    // Bind the form first, then fold the result, passing a function to handle errors, and a function to handle succes.
+    movieForm.bindFromRequest.fold(
+      // The error function. We return the index page with the error form, which will render the errors.
+      // We also wrap the result in a successful future, since this action is synchronous, but we're required to return
+      // a future because the person creation function returns a future.
+     errorForm => {
+        Future.successful(Ok(views.html.addMovie(movieForm)))
+      },
+      // There were no errors in the from, so create the person.
+      movie => {
+          val r = person2 ? Person2.AddMovie(movie.name, movie.totalSeats);
+          r.mapTo[Movie].map {
+
+            case x:Movie => Ok(views.html.movieAdded.apply(x)) // keep success page here
+            
+            case _ => Redirect(routes.PersonController.index()) // Keep a failure page here
+             
+          }(ec)
+          
+      }
+    )
+  }
+  
+  /**
    * A REST endpoint that gets all the people as JSON.
    */
   def getTickets = Action.async { implicit request =>
@@ -119,6 +157,19 @@ class PersonController @Inject() (system: ActorSystem)(repo: PersonRepository, v
     }(ec)
   }
 
+  
+  /**
+   * A REST endpoint that gets all the people as JSON.
+   */
+  def listMovies = Action.async { implicit request =>
+  	repo.listMovies().map { 
+  	  case movies: Seq[Movie] => Ok(views.html.listMovies.apply(movies.toList))
+  	   
+  	  case _  => Redirect(routes.PersonController.index())
+    }(ec)
+  }
+
+  
 
 
 /**
@@ -144,7 +195,15 @@ class PersonController @Inject() (system: ActorSystem)(repo: PersonRepository, v
           
           r.mapTo[Seq[Ticket]].map {
 
-            case tickets: Seq[Ticket] => Ok(views.html.display.apply(tickets.toList))
+            case tickets: Seq[Ticket] => {
+              
+              if(!tickets.isEmpty){
+                Ok(views.html.display.apply(tickets.toList))
+              }else{
+                Ok(views.html.error("Ticket with given Id is not found. Please try again!!!"))
+              }
+              
+            }
             
             case _ => Redirect(routes.PersonController.index()) // Keep a failure page here
              
@@ -168,17 +227,28 @@ class PersonController @Inject() (system: ActorSystem)(repo: PersonRepository, v
             case _ => Redirect(routes.PersonController.index()) // Keep a failure page here
              
           }(ec)
-
-    
-   
-    
     
   }
   
   
+  def addTicket2(name:String, quantity:String, title:String) = Action.async { implicit request =>
+    
+    val r = person2 ? Person2.Book(name,quantity.toInt,title)
+          play.api.Logger.info(r.value.toString())
+          
+          r.mapTo[Ticket].map {
+
+            case x:Ticket => Ok(views.html.confirm.apply(x)) // keep success page here
+            
+            case _ => Redirect(routes.PersonController.index()) // Keep a failure page here
+             
+          }(ec)
+    
+  }
+  
 }
 /**
- * The create person form.
+ * The create movie/ticket form.
  *
  * Generally for forms, you should define separate objects to your models, since forms very often need to present data
  * in a different way to your models.  In this case, it doesn't make sense to have an id parameter in the form, since
@@ -186,3 +256,12 @@ class PersonController @Inject() (system: ActorSystem)(repo: PersonRepository, v
  */
 case class AddTicketForm(name: String, ticketsCount: Int, title: String)
 case class FindTicketForm(id:String)
+case class AddMovieForm(name: String, totalSeats: Int)
+
+
+case object PersonController {
+  
+   def testmethod(){
+    
+  }
+}

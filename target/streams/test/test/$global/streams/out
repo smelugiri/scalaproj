@@ -1,0 +1,125 @@
+[0m[[0mdebug[0m] [0mForking tests - parallelism = false[0m
+[0m[[0mdebug[0m] [0mCreate a single-thread test executor[0m
+[0m[[0mdebug[0m] [0mRunner for org.specs2.runner.Specs2Framework produced 3 initial tasks for 3 tests.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(ApplicationSpec, sbt.ForkMain$SubclassFingerscan@6604c771, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0mApplicationSpec[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mApplication should[0m
+[0m[[0minfo[0m] [0m  [32m+[0m send 404 on a bad request[0m
+[0m[[0minfo[0m] [0m  [32m+[0m render the index page[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mTotal for specification ApplicationSpec[0m
+[0m[[0minfo[0m] [0m[36mFinished in 2 seconds, 21 ms[0m[0m
+[0m[[0minfo[0m] [0m[36m[0m[36m2 examples, 0 failure, 0 error[0m[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 2 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(IntegrationSpec, sbt.ForkMain$SubclassFingerscan@457155c8, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0mIntegrationSpec[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mApplication should[0m
+[0m[[0minfo[0m] [0m  [32m+[0m work from within a browser[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mTotal for specification IntegrationSpec[0m
+[0m[[0minfo[0m] [0m[36mFinished in 1 second, 357 ms[0m[0m
+[0m[[0minfo[0m] [0m[36m[0m[36m1 example, 0 failure, 0 error[0m[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(TicketSpec, sbt.ForkMain$SubclassFingerscan@65a5213b, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0mTicketSpec[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mApplication should[0m
+[0m[[0minfo[0m] [0m  [32m+[0m render the list all tickets page[0m
+[0m[[0minfo[0m] [0mApplication should[0m
+[0m[[0minfo[0m] [0m  [32m+[0m render the book a ticket[0m
+[0m[[31merror[0m] [0m  [33mx[0m work from within a browser2[0m
+[0m[[31merror[0m] [0m   '<?xml version="1.0" encoding="UTF-8"?>[0m
+[0m[[31merror[0m] [0m   <html>[0m
+[0m[[31merror[0m] [0m     <head/>[0m
+[0m[[31merror[0m] [0m     <body>[0m
+[0m[[31merror[0m] [0m       <h1>[0m
+[0m[[31merror[0m] [0m         Welcome[0m
+[0m[[31merror[0m] [0m       </h1>[0m
+[0m[[31merror[0m] [0m       <table border="1">[0m
+[0m[[31merror[0m] [0m         <tbody>[0m
+[0m[[31merror[0m] [0m           <tr>[0m
+[0m[[31merror[0m] [0m             <th>[0m
+[0m[[31merror[0m] [0m                Ticket Id[0m
+[0m[[31merror[0m] [0m             </th>[0m
+[0m[[31merror[0m] [0m             <th>[0m
+[0m[[31merror[0m] [0m                Movie Name[0m
+[0m[[31merror[0m] [0m             </th>[0m
+[0m[[31merror[0m] [0m             <th>[0m
+[0m[[31merror[0m] [0m                Person[0m
+[0m[[31merror[0m] [0m             </th>[0m
+[0m[[31merror[0m] [0m             <th>[0m
+[0m[[31merror[0m] [0m                Quantity[0m
+[0m[[31merror[0m] [0m             </th>[0m
+[0m[[31merror[0m] [0m             <th>[0m
+[0m[[31merror[0m] [0m                Action [0m
+[0m[[31merror[0m] [0m             </th>[0m
+[0m[[31merror[0m] [0m           </tr>[0m
+[0m[[31merror[0m] [0m         </tbody>[0m
+[0m[[31merror[0m] [0m       </table>[0m
+[0m[[31merror[0m] [0m     </body>[0m
+[0m[[31merror[0m] [0m   </html>[0m
+[0m[[31merror[0m] [0m   ' doesn't contain 'Batman' (TicketSpec.scala:65)[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mPOST createGroup with JSON should[0m
+[0m[[31merror[0m] [0m  [31m![0m create a group and return a message[0m
+[0m[[31merror[0m] [0m   null (TicketSpec.scala:78)[0m
+[0m[[31merror[0m] [0mTicketSpec$$anonfun$13$$anonfun$apply$10$$anonfun$apply$11.apply(TicketSpec.scala:78)[0m
+[0m[[31merror[0m] [0mTicketSpec$$anonfun$13$$anonfun$apply$10$$anonfun$apply$11.apply(TicketSpec.scala:73)[0m
+[0m[[31merror[0m] [0mplay.api.test.PlayRunners$class.running(Helpers.scala:42)[0m
+[0m[[31merror[0m] [0mplay.api.test.Helpers$.running(Helpers.scala:363)[0m
+[0m[[31merror[0m] [0mTicketSpec$$anonfun$13$$anonfun$apply$10.apply(TicketSpec.scala:73)[0m
+[0m[[31merror[0m] [0mTicketSpec$$anonfun$13$$anonfun$apply$10.apply(TicketSpec.scala:71)[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[31merror[0m] [0m  [33mx[0m work from within a browser3[0m
+[0m[[31merror[0m] [0m   '<?xml version="1.0" encoding="UTF-8"?>[0m
+[0m[[31merror[0m] [0m   <html>[0m
+[0m[[31merror[0m] [0m     <head/>[0m
+[0m[[31merror[0m] [0m     <body>[0m
+[0m[[31merror[0m] [0m       <h1>[0m
+[0m[[31merror[0m] [0m         Welcome[0m
+[0m[[31merror[0m] [0m       </h1>[0m
+[0m[[31merror[0m] [0m       <table border="1">[0m
+[0m[[31merror[0m] [0m         <tbody>[0m
+[0m[[31merror[0m] [0m           <tr>[0m
+[0m[[31merror[0m] [0m             <th>[0m
+[0m[[31merror[0m] [0m                Ticket Id[0m
+[0m[[31merror[0m] [0m             </th>[0m
+[0m[[31merror[0m] [0m             <th>[0m
+[0m[[31merror[0m] [0m                Movie Name[0m
+[0m[[31merror[0m] [0m             </th>[0m
+[0m[[31merror[0m] [0m             <th>[0m
+[0m[[31merror[0m] [0m                Person[0m
+[0m[[31merror[0m] [0m             </th>[0m
+[0m[[31merror[0m] [0m             <th>[0m
+[0m[[31merror[0m] [0m                Quantity[0m
+[0m[[31merror[0m] [0m             </th>[0m
+[0m[[31merror[0m] [0m             <th>[0m
+[0m[[31merror[0m] [0m                Action [0m
+[0m[[31merror[0m] [0m             </th>[0m
+[0m[[31merror[0m] [0m           </tr>[0m
+[0m[[31merror[0m] [0m         </tbody>[0m
+[0m[[31merror[0m] [0m       </table>[0m
+[0m[[31merror[0m] [0m     </body>[0m
+[0m[[31merror[0m] [0m   </html>[0m
+[0m[[31merror[0m] [0m   ' doesn't contain 'Batman' (TicketSpec.scala:95)[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mTotal for specification TicketSpec[0m
+[0m[[0minfo[0m] [0m[36mFinished in 349 ms[0m[0m
+[0m[[0minfo[0m] [0m[36m[0m[36m5 examples, 2 failures, 1 error[0m[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 5 events.[0m
+[0m[[0mdebug[0m] [0mRunner for com.novocode.junit.JUnitFramework produced 0 initial tasks for 0 tests.[0m
+[0m[[0mdebug[0m] [0mSummary for specs2 not available.[0m
+[0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
+[0m[[31merror[0m] [0mError: Total 8, Failed 2, Errors 1, Passed 5[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	ApplicationSpec[0m
+[0m[[0mdebug[0m] [0m	IntegrationSpec[0m
+[0m[[31merror[0m] [0mError during tests:[0m
+[0m[[31merror[0m] [0m	TicketSpec[0m
+[0m[[31merror[0m] [0m(test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

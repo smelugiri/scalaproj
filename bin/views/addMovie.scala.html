@@ -1,0 +1,17 @@
+@(movie: Form[AddMovieForm])(implicit messages: Messages)
+
+@import helper._
+
+@main("Add Movie") {
+	<script type='text/javascript' src='@routes.Assets.versioned("javascripts/index.js")'></script>
+
+
+  @form(routes.PersonController.addMovie()) {
+		@inputText(movie("name"))
+		@inputText(movie("totalSeats"))
+
+		<div class="buttons">
+			<input type="submit" value="Add Movie"/>
+		</div>
+	}
+}

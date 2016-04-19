@@ -9,11 +9,23 @@ import scala.concurrent.duration._
 import akka.pattern.ask
 import akka.pattern.pipe
 import akka.routing.RoundRobinPool
+import akka.actor.OneForOneStrategy
+import org.h2.message.DbException
+import akka.actor.ActorKilledException
+import akka.actor.StopChild
+import scala.util.control.Exception
+import akka.actor.SupervisorStrategy._
 
 case object Person2 {
   
    def props(repo: PersonRepository, ec: ExecutionContext): Props = Props(new Person2(repo)(ec) );
   
+   
+   case class AddMovie(name: String, totalSeats : Int){
+       require(name != null, "Movie Name cannot be null")
+       require(totalSeats > 0, "Total Seats should be greater than 0")
+   }
+   
     case class Book (name: String, ticketsCount: Int, title: String){
         require(name != null, "Nqme cannot be null")
         require(title != null, "Title cannot be null")
@@ -40,12 +52,27 @@ class Person2 @Inject() (repo: PersonRepository) (implicit ec: ExecutionContext)
 	var balance = BigInt(0)
 
 	implicit val timeout: Timeout = Timeout(5 seconds)
+	
+	
+	override val supervisorStrategy = OneForOneStrategy (){
+	  case x: DbException => Restart
+	  case y: ActorKilledException => Stop
+	  case _: Exception => Escalate
+	  
+	}
 
 	val ticket2 = context.actorOf(Ticket2.props(repo,ec).withRouter(RoundRobinPool(10)), name = "TicketActors")
 
 
 	def receive = {
 
+	  
+	  case AddMovie(name, totalSeats) => {
+	    ticket2 ! Ticket2.AddMovie(name, totalSeats, self)
+  		context.become(ReturnMovie(sender()))
+	  }
+	  
+	  
   	case Book(name, ticketsCount, title) =>  {
   
   		ticket2 !Ticket2.Book2(name, ticketsCount, title, self)
@@ -93,6 +120,17 @@ class Person2 @Inject() (repo: PersonRepository) (implicit ec: ExecutionContext)
 	def ReturnTicket(client:ActorRef):Receive = {
   	case ticket:Ticket2.MyTicket =>{
   		client ! ticket.ticket
+  	}
+  
+  	case _ =>{
+  		client ! null
+  	}
+	}
+	
+	def ReturnMovie(client:ActorRef):Receive = {
+  	case movie:Ticket2.MyMovie =>{
+  	   play.api.Logger.info("In return movie")
+  		client ! movie.movie
   	}
   
   	case _ =>{

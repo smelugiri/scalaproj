@@ -6,7 +6,7 @@ import slick.driver.JdbcProfile
 import models.Ticket
 import scala.concurrent.{ Future, ExecutionContext }
 //import sun.security.krb5.internal.Ticket
-import models.Ticket
+import models._
 
 /**
  * A repository for people.
@@ -51,10 +51,37 @@ class PersonRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(impl
     def * = (id, name, ticketsCount, title) <> ((Ticket.apply _).tupled, Ticket.unapply)
   }
 
+  
+   /**
+   * Here we define the table. It will have a name of people
+   */
+  private class MovieTable(tag: Tag) extends Table[Movie](tag, "movies") {
+
+    /** The ID column, which is the primary key, and auto incremented */
+    def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
+    
+        /** The name column */
+    def name = column[String]("name")
+
+    /** The totalSeats column */
+    def totalSeats = column[Int]("totalSeats")
+    
+    
+    /**
+     * This is the tables default "projection".
+     *
+     * It defines how the columns are converted to and from the Person object.
+     *
+     * In this case, we are simply passing the id, name and page parameters to the Person case classes
+     * apply and unapply methods.
+     */
+    def * = (id, name, totalSeats) <> ((Movie.apply _).tupled, Movie.unapply)
+  }
+  
   /**
    * The starting point for all queries on the people table.
    */
-  //private val people = TableQuery[PeopleTable]
+  private val movies = TableQuery[MovieTable]
   
   private val tickets = TableQuery[TicketTable]
   
@@ -108,6 +135,13 @@ class PersonRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(impl
   }
   
   
+  /**
+   * List all the people in the database.
+   */
+  def listMovies(): Future[Seq[Movie]] = db.run {
+    movies.result
+  }
+  
   def findTicket(id: String):Future[Seq[Ticket]] = db.run{
      val res = tickets.result.map{x => x.filter (_.id.toString() == id)}
      play.api.Logger.info(res.toString())
@@ -119,6 +153,19 @@ class PersonRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(impl
       q.delete
     
     
+  }
+  
+  
+  def addMovie(name: String, totalSeats: Int): Future[Movie] = db.run {
+    // We create a projection of just the name and age columns, since we're not inserting a value for the id column
+    (movies.map(p => (p.name, p.totalSeats))
+      // Now define it to return the id, because we want to know what id was generated for the person
+      returning movies.map(_.id)
+      // And we define a transformation for the returned value, which combines our original parameters with the
+      // returned id
+      into ((movie, id) => Movie(id, movie._1, movie._2))
+    // And finally, insert the person into the database
+    ) += (name, totalSeats)
   }
 }
 

@@ -4,7 +4,7 @@
 		module="play-scala-intro-reactive-platform-15v09-build-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20160330200644"
+		publication="20160416223842"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

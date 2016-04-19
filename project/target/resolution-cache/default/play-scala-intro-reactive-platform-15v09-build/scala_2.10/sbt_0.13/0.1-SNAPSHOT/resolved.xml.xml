@@ -4,7 +4,7 @@
 		module="play-scala-intro-reactive-platform-15v09-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20160330200647"
+		publication="20160416223846"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
@@ -51,17 +51,17 @@
 		<dependency org="com.typesafe.sbt" name="sbt-digest" rev="1.1.0" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10"/>
 		<dependency org="com.typesafe.sbt" name="sbt-mocha" rev="1.1.0" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10"/>
 		<dependency org="org.scala-sbt" name="sbt-core-next" rev="0.1.1" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10"/>
+		<override org="com.typesafe.play" module="play-exceptions" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="sbt-run-support_2.10" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.sbt" module="sbt-twirl" matcher="exact" rev="1.1.1-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="twirl-api_2.10" matcher="exact" rev="1.1.1-bin-rp-15v09p01"/>
 		<override org="com.typesafe.play" module="twirl-compiler_2.10" matcher="exact" rev="1.1.1-bin-rp-15v09p01"/>
 		<override org="com.typesafe.play" module="sbt-fork-run-protocol_2.10" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="routes-compiler_2.10" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="sbt-run-support_2.10" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="twirl-api_2.10" matcher="exact" rev="1.1.1-bin-rp-15v09p01"/>
-		<override org="com.typesafe.sbt" module="sbt-twirl" matcher="exact" rev="1.1.1-bin-rp-15v09p01"/>
-		<override org="com.typesafe.play" module="play-exceptions" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
 		<override org="com.typesafe.play" module="sbt-plugin" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
 		<override org="com.typesafe.play" module="build-link" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
 		<override org="com.typesafe.play" module="twirl-parser_2.10" matcher="exact" rev="1.1.1-bin-rp-15v09p01"/>
 		<override org="com.typesafe.play" module="sbt-fork-run-plugin" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
+		<override org="com.typesafe.play" module="routes-compiler_2.10" matcher="exact" rev="2.4.2-bin-rp-15v09p01"/>
 		<override org="org.scala-lang" module="scala-library" matcher="exact" rev="2.10.4"/>
 		<override org="org.scala-lang" module="scala-compiler" matcher="exact" rev="2.10.4"/>
 		<override org="org.scala-lang" module="scala-reflect" matcher="exact" rev="2.10.4"/>

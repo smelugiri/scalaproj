@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/conf/routes
-// @DATE:Sat Mar 19 20:00:54 EDT 2016
+// @DATE:Tue Apr 19 15:43:32 EDT 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -22,22 +22,22 @@ package controllers.javascript {
     }
 
   
+    // @LINE:9
+    def findTicket: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.PersonController.findTicket",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "findticket"})
+        }
+      """
+    )
+  
     // @LINE:8
     def getTickets: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PersonController.getTickets",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "tickets"})
-        }
-      """
-    )
-  
-    // @LINE:6
-    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.PersonController.index",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + """"})
         }
       """
     )
@@ -52,9 +52,59 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:11
+    def cancelTicket: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.PersonController.cancelTicket",
+      """
+        function(id) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "cancelTicket/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("id", encodeURIComponent(id))})
+        }
+      """
+    )
+  
+    // @LINE:16
+    def addMovie: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.PersonController.addMovie",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addMovie"})
+        }
+      """
+    )
+  
+    // @LINE:17
+    def listMovies: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.PersonController.listMovies",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "movies"})
+        }
+      """
+    )
+  
+    // @LINE:13
+    def addTicket2: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.PersonController.addTicket2",
+      """
+        function(name,quantity,title) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "bookTicket/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("name", encodeURIComponent(name)) + "/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("quantity", encodeURIComponent(quantity)) + "/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("title", encodeURIComponent(title))})
+        }
+      """
+    )
+  
+    // @LINE:6
+    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.PersonController.index",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + """"})
+        }
+      """
+    )
+  
   }
 
-  // @LINE:11
+  // @LINE:19
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -62,7 +112,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:11
+    // @LINE:19
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
