@@ -21,6 +21,7 @@ import akka.actor.Props
 import actors.Person2
 import dal.PersonRepository
 import akka.util._
+import akka.testkit._
 
 
 /**
@@ -55,8 +56,6 @@ class TicketSpec  @Inject() (system: ActorSystem)(repo: PersonRepository) (impli
       
       val x = Await.ready(home, 5.seconds) 
      // val result = call(action, home)
-     
-      
       
       status(home) must equalTo(OK)
       contentType(home) must beSome.which(_ == "text/html")
@@ -67,97 +66,64 @@ class TicketSpec  @Inject() (system: ActorSystem)(repo: PersonRepository) (impli
 
       browser.goTo("http://localhost:" + port+"/tickets")
 
-      browser.pageSource must contain("Batman")
+      browser.pageSource must contain("Movie Name")
+    }
+     
+     "list all the movies" in new WithBrowser {
+
+      browser.goTo("http://localhost:" + port+"/movies")
+
+      browser.pageSource must contain("Movie Name")
     }
   }
   
   
-//  "POST createGroup with JSON" should {
-//  "create a group and return a message" in {
-//    implicit val app = FakeApplication()
-//    running(app) {
-//      val fakeRequest = FakeRequest(Helpers.POST, "/ticket", FakeHeaders(), """ {"name": "Srikanth", "ticketsCount": 2, "title":"Batman" } """)
-//
-//      @Inject var pc: controllers.PersonController = null
-//      
+  "Application" should {
+
+    "render the book a ticket" in new WithApplication{
+      implicit val app = FakeApplication()
+       running(app) {
+      val fakeRequest = FakeRequest(POST, "/ticket", FakeHeaders(), """ {"name": "Srikanth", "ticketsCount": 2, "title":"Batman" } """)
+
+      @Inject var pc: controllers.PersonController = null
+      
 //      val cache = collection.mutable.Map[String, String]()
-//      
-//      val tuplePairs = List(("name", "Srikanth"),("ticketsCount","2"),("title", "Batman"))
-//      
 //      cache.put("name", "Srikanth")
 //      cache.put("ticketsCount","2")
 //      cache.put("title", "Batman")
-//
-//      val immutCache =tuplePairs.toMap
-//      
-//      val ret =  pc.ticketForm.mapping.bind(immutCache).right
-//      
-////      val result = pc.addTicket(ret).run  
-////      
-////      play.api.Logger.info(contentAsString(result))
-////      
-////      result must not equalTo(null)
-////      contentAsString(result) must contain("Batman")
-////      status(result) must equalTo(OK)
-//      
-//      
-//      
-//      status(ret) must not equalTo(null)
-//      
-//      //contentType(result) must beSome(AcceptExtractors.Accepts.Json.mimeType)
-//     
-//      // test the message response
-//    }
-//  }
 
-//  
-//   "work from within a browser3" in new WithBrowser {
-//
-//      browser.goTo("http://localhost:" + port+"/tickets")
-//
-//      browser.pageSource must contain("Batman")
-//    }
+      val tuplePairs = List(("name", "Srikanth"),("ticketsCount","2"),("title", "Batman"))
+      val immutCache =tuplePairs.toMap
+      
+      val ret =  pc.ticketForm.mapping.bind(immutCache).right
+      
+      val result = pc.addTicket(immutCache).run  
+      
+      result must not equalTo(null)
+      contentAsString(result) must contain("Batman")
+      status(result) must equalTo(OK)
+      
+      
+      
+      status(ret) must not equalTo(null)
+      
+      //contentType(result) must beSome(AcceptExtractors.Accepts.Json.mimeType)
+     
+      // test the message response
+    }
+    }
+    
+    
+  }
+  
+  "POST createGroup with JSON" should {
+   
+   "work from within a browser3" in new WithBrowser {
 
-  
-  
-//  "Ticket" should {
-//
-//  "be retrieved by id" in {
-//    running(FakeApplication()) {
-//  
-//      val Some(Ticket) = Computer.findById(21)
-//
-//      macintosh.name must equalTo("Macintosh")
-//      macintosh.introduced must beSome.which(dateIs(_, "1984-01-24"))  
-//  
-//    }
-//  }
-//}
-  
-//  "Application" should{
-//    "add a movie" in{
-//      
-//      
-//      val person = system.actorOf(Props[Person2], "person2")
-//      person ! Person2.Book("Srikanth", 3, "Batman")
-//      
-//      person ! Person2.Find("1")
-//      
-//      
-//      val result = repo.listMovies().map{
-//        movies => for(movie <- movies) yield{
-//          if(movie.name == "Batman"){
-//            true
-//          }
-//        }
-//      }
-//     
-//      
-//      
-//    }
-//  }
-  
-  
+      browser.goTo("http://localhost:" + port+"/tickets")
+
+      browser.pageSource must contain("Batman")
+    }
   
   
 }

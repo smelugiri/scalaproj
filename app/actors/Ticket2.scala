@@ -8,6 +8,8 @@ import akka.actor.OneForOneStrategy
 import akka.actor.SupervisorStrategy._
 import org.h2.message.DbException
 import akka.actor.ActorKilledException
+import akka.dispatch.RequiresMessageQueue
+import akka.dispatch.BoundedMessageQueueSemantics
 
 
 case object Ticket2 {
@@ -35,7 +37,7 @@ case object Ticket2 {
     
 }
 
-class Ticket2 @Inject() (repo: PersonRepository) (implicit ec: ExecutionContext) extends Actor {
+class Ticket2 @Inject() (repo: PersonRepository) (implicit ec: ExecutionContext) extends Actor with RequiresMessageQueue[BoundedMessageQueueSemantics]{
 	import Ticket2._
 	var balance = BigInt(0)
 	

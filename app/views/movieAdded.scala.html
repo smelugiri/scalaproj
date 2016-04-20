@@ -1,20 +1,23 @@
 @* movieAdded Template File *@
 @(movie: Movie)
 
+<h1>Regal Ticket Agency</h1>
+
+<a href="/"> &lt;&lt; Home </a>
+
+<h2> Movie Added Successfully</h2>
 
  <table border=1>
 	  <tr>
 	  	<th> Movie Id</th>
 	  	<th> Movie Name</th>
 	  	<th> Total Seats</th>
-	  	<th> Action </th>
 	  </tr>
   
 	   <tr>
 	  	<td>@movie.id</td>
 	  	<td>@movie.name</td>
 	  	<td>@movie.totalSeats</td>
-	  	<td><a href="/cancelTicket/@movie.id"> Cancel ticket(s)</a></td>
 	  </tr>
   	
   </table>

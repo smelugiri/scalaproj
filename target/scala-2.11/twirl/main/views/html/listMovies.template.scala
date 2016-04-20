@@ -26,8 +26,11 @@ Seq[Any](format.raw/*3.23*/("""
 
 
 
-"""),format.raw/*7.1*/("""<h1>Welcome</h1>
+"""),format.raw/*7.1*/("""<h1>Regal Ticket Agency</h1>
 
+<a href="/"> &lt;&lt; Home </a>
+
+<h2> Movies Showing </h2>
  <table border=1>
 	  <tr>
 	  	<th> Movie Id</th>
@@ -36,19 +39,19 @@ Seq[Any](format.raw/*3.23*/("""
 	  </tr>
   
 
-"""),_display_(/*17.2*/for(movie <- movies) yield /*17.22*/ {_display_(Seq[Any](format.raw/*17.24*/("""
+"""),_display_(/*20.2*/for(movie <- movies) yield /*20.22*/ {_display_(Seq[Any](format.raw/*20.24*/("""
   
  
-	   """),format.raw/*20.5*/("""<tr>
-	  	<td>"""),_display_(/*21.10*/movie/*21.15*/.id),format.raw/*21.18*/("""</td>
-	  	<td>"""),_display_(/*22.10*/movie/*22.15*/.name),format.raw/*22.20*/("""</td>
-	  	<td>"""),_display_(/*23.10*/movie/*23.15*/.totalSeats),format.raw/*23.26*/("""</td>
+	   """),format.raw/*23.5*/("""<tr>
+	  	<td>"""),_display_(/*24.10*/movie/*24.15*/.id),format.raw/*24.18*/("""</td>
+	  	<td>"""),_display_(/*25.10*/movie/*25.15*/.name),format.raw/*25.20*/("""</td>
+	  	<td>"""),_display_(/*26.10*/movie/*26.15*/.totalSeats),format.raw/*26.26*/("""</td>
 	  	
 	  </tr>
   	
-""")))}),format.raw/*27.2*/("""
+""")))}),format.raw/*30.2*/("""
 
-  """),format.raw/*29.3*/("""</table>
+  """),format.raw/*32.3*/("""</table>
 """))
       }
     }
@@ -69,11 +72,11 @@ Seq[Any](format.raw/*3.23*/("""
 object listMovies extends listMovies_Scope0.listMovies
               /*
                   -- GENERATED --
-                  DATE: Tue Apr 19 15:46:09 EDT 2016
+                  DATE: Tue Apr 19 18:43:24 EDT 2016
                   SOURCE: /Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/app/views/listMovies.scala.html
-                  HASH: 53ac551c22c874b2111606c45211d618c6ae20fb
-                  MATRIX: 568->33|684->54|714->58|872->190|908->210|948->212|985->222|1026->236|1040->241|1064->244|1106->259|1120->264|1146->269|1188->284|1202->289|1234->300|1289->325|1320->329
-                  LINES: 20->3|25->3|29->7|39->17|39->17|39->17|42->20|43->21|43->21|43->21|44->22|44->22|44->22|45->23|45->23|45->23|49->27|51->29
+                  HASH: d967bb217258d5ee0ce6a35640e5df1ea981615b
+                  MATRIX: 568->33|684->54|714->58|943->261|979->281|1019->283|1056->293|1097->307|1111->312|1135->315|1177->330|1191->335|1217->340|1259->355|1273->360|1305->371|1360->396|1391->400
+                  LINES: 20->3|25->3|29->7|42->20|42->20|42->20|45->23|46->24|46->24|46->24|47->25|47->25|47->25|48->26|48->26|48->26|52->30|54->32
                   -- GENERATED --
               */
           

@@ -69,6 +69,10 @@ case class PersonController @Inject() (system: ActorSystem)(repo: PersonReposito
     Ok(views.html.find(findTicketForm))
   }
   
+  def landing = Action{
+     Ok(views.html.landing.apply())
+  }
+  
   val person2 = system.actorOf(Person2.props(repo,ec).withRouter(RoundRobinPool(10)), name = "PersonActors")
   
   //val isTerm = person2.isTerminated;
@@ -91,13 +95,10 @@ case class PersonController @Inject() (system: ActorSystem)(repo: PersonReposito
   def addTicket = Action.async { implicit request =>
     // Bind the form first, then fold the result, passing a function to handle errors, and a function to handle succes.
     ticketForm.bindFromRequest.fold(
-      // The error function. We return the index page with the error form, which will render the errors.
-      // We also wrap the result in a successful future, since this action is synchronous, but we're required to return
-      // a future because the person creation function returns a future.
+      
       errorForm => {
         Future.successful(Ok(views.html.index(errorForm)))
       },
-      // There were no errors in the from, so create the person.
       ticket => {
           
           val r = person2 ? Person2.Book(ticket.name, ticket.ticketsCount, ticket.title);
@@ -200,7 +201,7 @@ case class PersonController @Inject() (system: ActorSystem)(repo: PersonReposito
               if(!tickets.isEmpty){
                 Ok(views.html.display.apply(tickets.toList))
               }else{
-                Ok(views.html.error("Ticket with given Id is not found. Please try again!!!"))
+                Ok("<h2> Error </h2> <p> Ticket with given Id is not found <a href='/findticket'> Please try again!!! </a></p> <p><a href='/'> Continue to home page</a> <p> ").as(HTML)
               }
               
             }
@@ -222,7 +223,7 @@ case class PersonController @Inject() (system: ActorSystem)(repo: PersonReposito
           
           r.mapTo[String].map {
 
-            case "Done"=> Ok("Tickets Cancelled")
+            case "Done"=> Ok("<h2> Your ticket is cancelled </h2> <p> <a href='/'>Go to home page </a></p> ").as(HTML)
             
             case _ => Redirect(routes.PersonController.index()) // Keep a failure page here
              

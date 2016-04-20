@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/conf/routes
-// @DATE:Tue Apr 19 15:43:32 EDT 2016
+// @DATE:Tue Apr 19 17:13:15 EDT 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -22,7 +22,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:9
+    // @LINE:10
     def findTicket: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PersonController.findTicket",
       """
@@ -32,7 +32,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:8
+    // @LINE:9
     def getTickets: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PersonController.getTickets",
       """
@@ -42,7 +42,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:7
+    // @LINE:6
+    def landing: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.PersonController.landing",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + """"})
+        }
+      """
+    )
+  
+    // @LINE:8
     def addTicket: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PersonController.addTicket",
       """
@@ -52,7 +62,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:11
+    // @LINE:12
     def cancelTicket: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PersonController.cancelTicket",
       """
@@ -62,7 +72,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:16
+    // @LINE:17
     def addMovie: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PersonController.addMovie",
       """
@@ -72,7 +82,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:17
+    // @LINE:18
     def listMovies: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PersonController.listMovies",
       """
@@ -82,7 +92,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:13
+    // @LINE:14
     def addTicket2: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PersonController.addTicket2",
       """
@@ -92,19 +102,19 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:6
+    // @LINE:7
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PersonController.index",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + """"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "home"})
         }
       """
     )
   
   }
 
-  // @LINE:19
+  // @LINE:20
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -112,7 +122,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:19
+    // @LINE:20
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

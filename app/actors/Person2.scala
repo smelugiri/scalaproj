@@ -15,6 +15,8 @@ import akka.actor.ActorKilledException
 import akka.actor.StopChild
 import scala.util.control.Exception
 import akka.actor.SupervisorStrategy._
+import akka.dispatch.RequiresMessageQueue
+import akka.dispatch.BoundedMessageQueueSemantics
 
 case object Person2 {
   
@@ -47,7 +49,7 @@ case object Person2 {
     
 }
 
-class Person2 @Inject() (repo: PersonRepository) (implicit ec: ExecutionContext) extends Actor {
+class Person2 @Inject() (repo: PersonRepository) (implicit ec: ExecutionContext) extends Actor with RequiresMessageQueue[BoundedMessageQueueSemantics]{
 	import Person2._
 	var balance = BigInt(0)
 

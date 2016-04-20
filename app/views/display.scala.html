@@ -3,7 +3,10 @@
 
 
 
-<h1>Welcome</h1>
+<h1>Regal Ticket Agency</h1>
+
+<a href="/"> &lt;&lt; Home </a>
+<h3>All tickets booked so far</h3>
 
  <table border=1>
 	  <tr>
@@ -14,6 +17,8 @@
 	  	<th> Action </th>
 	  </tr>
   
+  @if(tickets.size > 0){
+  	
 
 @for(ticket <- tickets) {
   
@@ -27,5 +32,10 @@
 	  </tr>
   	
 }
+}else{
+	 <tr><td colspan =5 align="center">No tickets have been booked so far</td></tr>
+}
 
   </table>
+
+  

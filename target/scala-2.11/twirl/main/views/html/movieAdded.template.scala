@@ -24,20 +24,23 @@ class movieAdded extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,
 
 Seq[Any](format.raw/*2.16*/("""
 
+"""),format.raw/*4.1*/("""<h1>Regal Ticket Agency</h1>
 
- """),format.raw/*5.2*/("""<table border=1>
+<a href="/"> &lt;&lt; Home </a>
+
+<h2> Movie Added Successfully</h2>
+
+ <table border=1>
 	  <tr>
 	  	<th> Movie Id</th>
 	  	<th> Movie Name</th>
 	  	<th> Total Seats</th>
-	  	<th> Action </th>
 	  </tr>
   
 	   <tr>
-	  	<td>"""),_display_(/*14.10*/movie/*14.15*/.id),format.raw/*14.18*/("""</td>
-	  	<td>"""),_display_(/*15.10*/movie/*15.15*/.name),format.raw/*15.20*/("""</td>
-	  	<td>"""),_display_(/*16.10*/movie/*16.15*/.totalSeats),format.raw/*16.26*/("""</td>
-	  	<td><a href="/cancelTicket/"""),_display_(/*17.33*/movie/*17.38*/.id),format.raw/*17.41*/(""""> Cancel ticket(s)</a></td>
+	  	<td>"""),_display_(/*18.10*/movie/*18.15*/.id),format.raw/*18.18*/("""</td>
+	  	<td>"""),_display_(/*19.10*/movie/*19.15*/.name),format.raw/*19.20*/("""</td>
+	  	<td>"""),_display_(/*20.10*/movie/*20.15*/.totalSeats),format.raw/*20.26*/("""</td>
 	  </tr>
   	
   </table>
@@ -61,11 +64,11 @@ Seq[Any](format.raw/*2.16*/("""
 object movieAdded extends movieAdded_Scope0.movieAdded
               /*
                   -- GENERATED --
-                  DATE: Tue Apr 19 14:52:38 EDT 2016
+                  DATE: Tue Apr 19 18:43:24 EDT 2016
                   SOURCE: /Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/app/views/movieAdded.scala.html
-                  HASH: e6425f1ee0635d4009e9dc5465a9b7ef2e0f682a
-                  MATRIX: 562->32|671->46|701->50|879->201|893->206|917->209|959->224|973->229|999->234|1041->249|1055->254|1087->265|1152->303|1166->308|1190->311
-                  LINES: 20->2|25->2|28->5|37->14|37->14|37->14|38->15|38->15|38->15|39->16|39->16|39->16|40->17|40->17|40->17
+                  HASH: 327fe0f6aa75f2694ad5800db955cc6e057feb5d
+                  MATRIX: 562->32|671->46|699->48|955->277|969->282|993->285|1035->300|1049->305|1075->310|1117->325|1131->330|1163->341
+                  LINES: 20->2|25->2|27->4|41->18|41->18|41->18|42->19|42->19|42->19|43->20|43->20|43->20
                   -- GENERATED --
               */
           

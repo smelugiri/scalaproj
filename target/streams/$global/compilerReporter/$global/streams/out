@@ -1,2 +1,8 @@
+[0m[[33mwarn[0m] [0m/Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/app/controllers/PersonController.scala:73: Adaptation of argument list by inserting () has been deprecated: leaky (Object-receiving) target makes this especially dangerous.[0m
+[0m[[33mwarn[0m] [0m        signature: landing.apply(param: Any): play.twirl.api.HtmlFormat.Appendable[0m
+[0m[[33mwarn[0m] [0m  given arguments: <none>[0m
+[0m[[33mwarn[0m] [0m after adaptation: landing((): Unit)[0m
+[0m[[33mwarn[0m] [0m     Ok(views.html.landing.apply())[0m
+[0m[[33mwarn[0m] [0m                                ^[0m
 [0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
-[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mtwo warnings found[0m

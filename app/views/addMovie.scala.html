@@ -5,6 +5,11 @@
 @main("Add Movie") {
 	<script type='text/javascript' src='@routes.Assets.versioned("javascripts/index.js")'></script>
 
+<h1>Regal Ticket Agency</h1>
+
+<a href="/"> &lt;&lt; Home </a>
+
+<h2> Add Movie</h2>
 
   @form(routes.PersonController.addMovie()) {
 		@inputText(movie("name"))

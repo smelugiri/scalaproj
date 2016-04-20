@@ -1,0 +1,29 @@
+@* listMovies Template File *@
+
+@(movies: List[Movie])
+
+
+
+<h1>Welcome</h1>
+
+ <table border=1>
+	  <tr>
+	  	<th> Movie Id</th>
+	  	<th> Movie Name</th>
+	  	<th> Total Seats</th>
+	  </tr>
+  
+
+@for(movie <- movies) {
+  
+ 
+	   <tr>
+	  	<td>@movie.id</td>
+	  	<td>@movie.name</td>
+	  	<td>@movie.totalSeats</td>
+	  	
+	  </tr>
+  	
+}
+
+  </table>

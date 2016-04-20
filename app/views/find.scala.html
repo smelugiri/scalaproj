@@ -2,17 +2,21 @@
 
 @import helper._
 
-@main("Ticket Agency") {
+@main("Find Ticket") {
 	<script type='text/javascript' src='@routes.Assets.versioned("javascripts/index.js")'></script>
 
-	<ul id="tickets"></ul>
+<h1>Regal Ticket Agency</h1>
+
+<a href="/"> &lt;&lt; Home </a>
+
+<h2> Enter the Ticket Id from your reservation</h2>
 
   @form(routes.PersonController.findTicket()) {
 		@inputText(ticket("id"))
 		
 
 		<div class="buttons">
-			<input type="submit" value="Select Ticket"/>
+			<input type="submit" value="Find Ticket"/>
 		</div>
 	}
 }

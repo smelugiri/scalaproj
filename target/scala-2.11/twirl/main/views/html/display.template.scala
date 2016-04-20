@@ -26,7 +26,10 @@ Seq[Any](format.raw/*2.25*/("""
 
 
 
-"""),format.raw/*6.1*/("""<h1>Welcome</h1>
+"""),format.raw/*6.1*/("""<h1>Regal Ticket Agency</h1>
+
+<a href="/"> &lt;&lt; Home </a>
+<h3>All tickets booked so far</h3>
 
  <table border=1>
 	  <tr>
@@ -37,22 +40,28 @@ Seq[Any](format.raw/*2.25*/("""
 	  	<th> Action </th>
 	  </tr>
   
+  """),_display_(/*20.4*/if(tickets.size > 0)/*20.24*/{_display_(Seq[Any](format.raw/*20.25*/("""
+  	
 
-"""),_display_(/*18.2*/for(ticket <- tickets) yield /*18.24*/ {_display_(Seq[Any](format.raw/*18.26*/("""
+"""),_display_(/*23.2*/for(ticket <- tickets) yield /*23.24*/ {_display_(Seq[Any](format.raw/*23.26*/("""
   
  
-	   """),format.raw/*21.5*/("""<tr>
-	  	<td>"""),_display_(/*22.10*/ticket/*22.16*/.id),format.raw/*22.19*/("""</td>
-	  	<td>"""),_display_(/*23.10*/ticket/*23.16*/.title),format.raw/*23.22*/("""</td>
-	  	<td>"""),_display_(/*24.10*/ticket/*24.16*/.name),format.raw/*24.21*/("""</td>
-	  	<td>"""),_display_(/*25.10*/ticket/*25.16*/.ticketsCount),format.raw/*25.29*/("""</td>
-	  	<td><a href="/cancelTicket/"""),_display_(/*26.33*/ticket/*26.39*/.id),format.raw/*26.42*/(""""> Cancel ticket(s)</a></td>
+	   """),format.raw/*26.5*/("""<tr>
+	  	<td>"""),_display_(/*27.10*/ticket/*27.16*/.id),format.raw/*27.19*/("""</td>
+	  	<td>"""),_display_(/*28.10*/ticket/*28.16*/.title),format.raw/*28.22*/("""</td>
+	  	<td>"""),_display_(/*29.10*/ticket/*29.16*/.name),format.raw/*29.21*/("""</td>
+	  	<td>"""),_display_(/*30.10*/ticket/*30.16*/.ticketsCount),format.raw/*30.29*/("""</td>
+	  	<td><a href="/cancelTicket/"""),_display_(/*31.33*/ticket/*31.39*/.id),format.raw/*31.42*/(""""> Cancel ticket(s)</a></td>
 	  </tr>
   	
-""")))}),format.raw/*29.2*/("""
+""")))}),format.raw/*34.2*/("""
+""")))}/*35.2*/else/*35.6*/{_display_(Seq[Any](format.raw/*35.7*/("""
+	 """),format.raw/*36.3*/("""<tr><td colspan =5 align="center">No tickets have been booked so far</td></tr>
+""")))}),format.raw/*37.2*/("""
 
-  """),format.raw/*31.3*/("""</table>
-"""))
+  """),format.raw/*39.3*/("""</table>
+
+  """))
       }
     }
   }
@@ -72,11 +81,11 @@ Seq[Any](format.raw/*2.25*/("""
 object display extends display_Scope0.display
               /*
                   -- GENERATED --
-                  DATE: Mon Apr 18 22:09:12 EDT 2016
+                  DATE: Tue Apr 19 18:35:41 EDT 2016
                   SOURCE: /Users/srikanthmelugiri/play-scala-intro-reactive-platform-15v09/app/views/display.scala.html
-                  HASH: f464fd62a485fa0ba889c696970f3f0cd23def5c
-                  MATRIX: 561->30|679->53|709->57|908->230|946->252|986->254|1023->264|1064->278|1079->284|1103->287|1145->302|1160->308|1187->314|1229->329|1244->335|1270->340|1312->355|1327->361|1361->374|1426->412|1441->418|1465->421|1538->464|1569->468
-                  LINES: 20->2|25->2|29->6|41->18|41->18|41->18|44->21|45->22|45->22|45->22|46->23|46->23|46->23|47->24|47->24|47->24|48->25|48->25|48->25|49->26|49->26|49->26|52->29|54->31
+                  HASH: 25eda3dca42f5beea40d734e249370b8fd2c7d5c
+                  MATRIX: 561->30|679->53|709->57|989->311|1018->331|1057->332|1090->339|1128->361|1168->363|1205->373|1246->387|1261->393|1285->396|1327->411|1342->417|1369->423|1411->438|1426->444|1452->449|1494->464|1509->470|1543->483|1608->521|1623->527|1647->530|1720->573|1740->575|1752->579|1790->580|1820->583|1930->663|1961->667
+                  LINES: 20->2|25->2|29->6|43->20|43->20|43->20|46->23|46->23|46->23|49->26|50->27|50->27|50->27|51->28|51->28|51->28|52->29|52->29|52->29|53->30|53->30|53->30|54->31|54->31|54->31|57->34|58->35|58->35|58->35|59->36|60->37|62->39
                   -- GENERATED --
               */
           
